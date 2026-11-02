@@ -1,0 +1,1 @@
+Welcome to Traffic Shaffic, an indie isometric puzzle game meant to easily teach traffic safety laws and road hygiene! The game is being developed by a team of 5 college students, and will feature cute handmade pixel art!
