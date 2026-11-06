@@ -1,26 +1,7 @@
-[gd_scene format=3 uid="uid://cvhmui15kk1yl"]
+[gd_scene format=3 uid="uid://difgfhi5v2vr7"]
 
-[ext_resource type="Script" uid="uid://vqqos4ff0o15" path="res://game.gd" id="1_ekttx"]
-[ext_resource type="Texture2D" uid="uid://bo5j848gt64y6" path="res://assets/images.png" id="2_58a3d"]
+[ext_resource type="PackedScene" uid="uid://cvhmui15kk1yl" path="res://scenes/object.tscn" id="1_uwrxv"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_odilm"]
-size = Vector2(474, 649)
+[node name="game" type="Node2D" unique_id=1934689494]
 
-[node name="object" type="Node2D" unique_id=109180345]
-script = ExtResource("1_ekttx")
-
-[node name="Area2D" type="Area2D" parent="." unique_id=31827968]
-position = Vector2(540, 540)
-scale = Vector2(0.4, 0.4)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=752864661]
-scale = Vector2(1, 1.055)
-shape = SubResource("RectangleShape2D_odilm")
-
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=672840555]
-position = Vector2(540, 540)
-scale = Vector2(0.474, 0.5)
-texture = ExtResource("2_58a3d")
-
-[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
-[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]
+[node name="object" parent="." unique_id=109180345 instance=ExtResource("1_uwrxv")]

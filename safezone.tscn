@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://b0sf1x8ou33qf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_odilm"]
+size = Vector2(84, 27)
+
+[node name="safezone" type="StaticBody2D" unique_id=1106446467 groups=["traffic_object"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=337156934]
+position = Vector2(32, 3.5)
+shape = SubResource("RectangleShape2D_odilm")
+
+[node name="Label" type="Label" parent="." unique_id=1121521636]
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 30.0
+offset_bottom = 13.0
+text = "SAFE ZONE"
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1987688024]
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 74.0
+offset_bottom = 17.0
+color = Color(0.88235295, 0.8666667, 0.9764706, 0.31764707)

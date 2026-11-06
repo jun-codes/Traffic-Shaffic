@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://cvhmui15kk1yl"]
+
+[ext_resource type="Script" uid="uid://vqqos4ff0o15" path="res://scripts/object.gd" id="1_cbfvs"]
+[ext_resource type="Texture2D" uid="uid://byv7g4odpibgy" path="res://assets/default.png" id="2_a0y2b"]
+[ext_resource type="Texture2D" uid="uid://dmp11xcilnn7i" path="res://assets/icon.png" id="3_6qvdj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_odilm"]
+size = Vector2(480, 480)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_odilm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_a0y2b")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_6qvdj")
+}],
+"loop": 1,
+"name": &"icon",
+"speed": 5.0
+}]
+
+[node name="object" type="Node2D" unique_id=109180345]
+script = ExtResource("1_cbfvs")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=31827968]
+scale = Vector2(0.4, 0.4)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=752864661]
+position = Vector2(0.24987793, 8.75)
+scale = Vector2(0.9999998, 1.0549997)
+shape = SubResource("RectangleShape2D_odilm")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1615730907]
+sprite_frames = SubResource("SpriteFrames_odilm")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]
