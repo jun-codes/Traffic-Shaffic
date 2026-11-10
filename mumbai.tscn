@@ -1,32 +1,11 @@
 [gd_scene format=3 uid="uid://0kdoc1cfxmrm"]
 
 [ext_resource type="PackedScene" uid="uid://cvlxstcmvxm3m" path="res://car.tscn" id="1_4et2j"]
-[ext_resource type="Texture2D" uid="uid://cpfg4immgno53" path="res://icons/multimedia-play-icon-circle-button-svgrepo-com.svg" id="2_4et2j"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sueu2"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8tbat"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4et2j"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ymbtj"]
 
 [node name="mumbai" type="Node2D" unique_id=415463663]
 
 [node name="car" parent="." unique_id=887401131 instance=ExtResource("1_4et2j")]
-
-[node name="pause" type="Button" parent="." unique_id=1992443042]
-process_mode = 3
-offset_left = 986.0
-offset_top = 10.999999
-offset_right = 1546.0
-offset_bottom = 531.0
-scale = Vector2(0.29670146, 0.30222148)
-theme_override_styles/normal = SubResource("StyleBoxEmpty_sueu2")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_8tbat")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_4et2j")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_ymbtj")
-toggle_mode = true
-icon = ExtResource("2_4et2j")
-
-[connection signal="toggled" from="pause" to="car" method="_on_pause_toggled"]
+position = Vector2(115.000015, 136)
+rotation = -0.016183455
+scale = Vector2(1.0096483, 0.9906227)
+skew = 0.019008398
