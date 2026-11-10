@@ -1,18 +1,18 @@
 [gd_scene format=3 uid="uid://cvlxstcmvxm3m"]
 
 [ext_resource type="Script" uid="uid://c2qkimn5rpsed" path="res://car.gd" id="1_uoj53"]
-[ext_resource type="Texture2D" uid="uid://om7pi6k24scl" path="res://icons/car-side-svgrepo-com.svg" id="2_k61xc"]
+[ext_resource type="Texture2D" uid="uid://c08pmtxnu2c6" path="res://icons/car-side-svgrepo-com.png" id="2_uoj53"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_le82g"]
-size = Vector2(19.28125, 17.75)
+size = Vector2(226, 149)
 
 [node name="car" type="CharacterBody2D" unique_id=887401131]
 script = ExtResource("1_uoj53")
 
 [node name="CarSideSvgrepoCom" type="Sprite2D" parent="." unique_id=947123103]
-scale = Vector2(0.28374988, 0.28499994)
-texture = ExtResource("2_k61xc")
+scale = Vector2(0.4, 0.401)
+texture = ExtResource("2_uoj53")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1292953604]
-position = Vector2(0, -11)
+position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_le82g")

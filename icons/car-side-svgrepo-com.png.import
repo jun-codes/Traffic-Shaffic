@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://om7pi6k24scl"
-path="res://.godot/imported/car-side-svgrepo-com.svg-11f72d81f91ee1bbb55da475ea9b6eba.ctex"
+uid="uid://c08pmtxnu2c6"
+path="res://.godot/imported/car-side-svgrepo-com.png-f09b301ef6f2c387d4b9f977855b7e9b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://icons/car-side-svgrepo-com.svg"
-dest_files=["res://.godot/imported/car-side-svgrepo-com.svg-11f72d81f91ee1bbb55da475ea9b6eba.ctex"]
+source_file="res://icons/car-side-svgrepo-com.png"
+dest_files=["res://.godot/imported/car-side-svgrepo-com.png-f09b301ef6f2c387d4b9f977855b7e9b.ctex"]
 
 [params]
 
@@ -38,6 +38,3 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
-svg/scale=1.0
-editor/scale_with_editor_scale=false
-editor/convert_colors_with_editor_theme=false
