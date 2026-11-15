@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://difgfhi5v2vr7"]
+
+[ext_resource type="PackedScene" uid="uid://b0g38wlp8ahid" path="res://scenes/level_1.tscn" id="1_lbhrr"]
+[ext_resource type="Texture2D" uid="uid://cwvl3xdwal7na" path="res://assets/grass.png" id="1_u5sy4"]
+[ext_resource type="PackedScene" uid="uid://b0sf1x8ou33qf" path="res://scenes/safezone.tscn" id="2_iywne"]
+[ext_resource type="PackedScene" uid="uid://bphc8tv0tvyb" path="res://scenes/npc.tscn" id="3_p57ef"]
+[ext_resource type="Script" uid="uid://bmnrfgreqch8l" path="res://scripts/npc.gd" id="4_u5sy4"]
+[ext_resource type="PackedScene" uid="uid://cvhmui15kk1yl" path="res://scenes/object.tscn" id="5_iywne"]
+[ext_resource type="Script" uid="uid://dq3e0ip1fs35l" path="res://scripts/npc2.gd" id="5_p57ef"]
+[ext_resource type="Texture2D" uid="uid://xlpllrlglrkt" path="res://assets/sidebar.png" id="8_gee14"]
+
+[node name="game" type="Node2D" unique_id=2001795637]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1190583450]
+position = Vector2(579, 333.49997)
+scale = Vector2(0.603125, 0.61759263)
+texture = ExtResource("1_u5sy4")
+
+[node name="Level 1" parent="." unique_id=1126981036 instance=ExtResource("1_lbhrr")]
+
+[node name="StaticBody2D2" parent="." unique_id=843230710 instance=ExtResource("2_iywne")]
+position = Vector2(755, 454)
+scale = Vector2(2, 4)
+
+[node name="StaticBody2D" parent="." unique_id=118579619 instance=ExtResource("2_iywne")]
+position = Vector2(754, 207)
+scale = Vector2(2, 4)
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=362324082]
+offset_left = 933.0
+offset_top = 111.0
+offset_right = 1143.0
+offset_bottom = 667.0
+mouse_filter = 2
+mouse_behavior_recursive = 1
+color = Color(0.0020056386, 0.0017823452, 0.004254057, 1)
+
+[node name="Sidebar" type="Sprite2D" parent="." unique_id=331706380]
+position = Vector2(1036.5, 334)
+scale = Vector2(0.8260868, 0.6166667)
+texture = ExtResource("8_gee14")
+
+[node name="npc" parent="." unique_id=109180345 groups=["npc"] instance=ExtResource("3_p57ef")]
+process_mode = 1
+position = Vector2(880, 329)
+script = ExtResource("4_u5sy4")
+
+[node name="npc2" parent="." unique_id=446842908 groups=["npc"] instance=ExtResource("3_p57ef")]
+process_mode = 1
+position = Vector2(808, 337)
+script = ExtResource("4_u5sy4")
+
+[node name="npc3" parent="." unique_id=1192626434 groups=["npc"] instance=ExtResource("3_p57ef")]
+process_mode = 1
+position = Vector2(840, 398)
+script = ExtResource("5_p57ef")
+
+[node name="object" parent="." unique_id=193548254 instance=ExtResource("5_iywne")]
+process_mode = 3
+position = Vector2(1034, 242)
+
+[connection signal="traffic_switched" from="object" to="npc" method="_on_object_traffic_switched"]
+[connection signal="traffic_switched" from="object" to="npc2" method="_on_object_traffic_switched"]
+[connection signal="traffic_switched" from="object" to="npc3" method="_on_object_traffic_switched"]

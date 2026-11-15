@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://cvhmui15kk1yl"]
+
+[ext_resource type="Script" uid="uid://vqqos4ff0o15" path="res://scripts/object.gd" id="1_cbfvs"]
+[ext_resource type="Texture2D" uid="uid://c7hvqvacqtqj1" path="res://assets/traffic red light.png" id="2_a03g0"]
+[ext_resource type="FontFile" uid="uid://dnw3gmmsf4lfv" path="res://assets/PixelOperator8-Bold.ttf" id="3_a0y2b"]
+[ext_resource type="Texture2D" uid="uid://b48xwsfdk7eus" path="res://assets/traffic green light.png" id="4_f66fi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_odilm"]
+size = Vector2(533.3334, 1429.7002)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a03g0"]
+atlas = ExtResource("2_a03g0")
+region = Rect2(0, 0, 209, 608)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f66fi"]
+atlas = ExtResource("4_f66fi")
+region = Rect2(0, 0, 208, 611)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_iywne"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a03g0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f66fi")
+}],
+"loop": 2,
+"name": &"traffic",
+"speed": 2.0
+}]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_odilm"]
+bg_color = Color(0, 0.5176471, 0.42352942, 0.47843137)
+
+[node name="object" type="Node2D" unique_id=109180345 groups=["npc"]]
+scale = Vector2(0.3, 0.3)
+script = ExtResource("1_cbfvs")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=31827968]
+scale = Vector2(0.4, 0.4)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=752864661]
+position = Vector2(16.666685, 29.166666)
+scale = Vector2(0.9999998, 1.0549997)
+shape = SubResource("RectangleShape2D_odilm")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1615730907]
+sprite_frames = SubResource("SpriteFrames_iywne")
+animation = &"traffic"
+
+[node name="Label" type="Label" parent="." unique_id=718633445]
+offset_right = 613.3333
+offset_bottom = 447.0
+theme_override_fonts/font = ExtResource("3_a0y2b")
+theme_override_font_sizes/font_size = 46
+theme_override_styles/normal = SubResource("StyleBoxFlat_odilm")
+text = "TRAFFIC SIGNAL
+
+A signaling device  to control the movement
+of vehicles or pedestrians 
+"
+vertical_alignment = 1
+autowrap_mode = 2
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]

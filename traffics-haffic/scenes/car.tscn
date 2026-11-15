@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://cvlxstcmvxm3m"]
+
+[ext_resource type="Script" uid="uid://b5ep86k3j8rr4" path="res://scripts/car.gd" id="1_uoj53"]
+[ext_resource type="Texture2D" uid="uid://beraabwc7r6g2" path="res://assets/car.png" id="2_k61xc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_le82g"]
+size = Vector2(19.28125, 17.75)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_odilm"]
+size = Vector2(125, 87)
+
+[node name="car" type="CharacterBody2D" unique_id=887401131]
+script = ExtResource("1_uoj53")
+
+[node name="CarSideSvgrepoCom" type="Sprite2D" parent="." unique_id=947123103]
+scale = Vector2(0.429, 0.43)
+texture = ExtResource("2_k61xc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1292953604]
+position = Vector2(-4, 0)
+shape = SubResource("RectangleShape2D_le82g")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=229924449]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1825946752]
+position = Vector2(-0.5, 0.5)
+shape = SubResource("RectangleShape2D_odilm")
+
+[connection signal="lvl_play" from="." to="." method="_on_lvl_play"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

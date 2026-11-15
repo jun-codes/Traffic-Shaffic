@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://be4fvif1bm1kf"]
+
+[ext_resource type="Script" uid="uid://drbvdredtnhfq" path="res://scripts/intro.gd" id="1_yjqpq"]
+[ext_resource type="Texture2D" uid="uid://dl8bbia0b4c3c" path="res://assets/opening screen.png" id="2_4bx60"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ayt76"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7a8ye"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0a7ni"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_y72e6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_u2rf6"]
+
+[node name="Node2D" type="Node2D" unique_id=1913676566]
+script = ExtResource("1_yjqpq")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=641885721]
+position = Vector2(575.99994, 324)
+scale = Vector2(0.59999996, 0.59999996)
+texture = ExtResource("2_4bx60")
+
+[node name="Button" type="Button" parent="." unique_id=1021002574]
+offset_left = 417.0
+offset_top = 210.0
+offset_right = 732.0
+offset_bottom = 284.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ayt76")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_7a8ye")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_0a7ni")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_y72e6")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_u2rf6")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

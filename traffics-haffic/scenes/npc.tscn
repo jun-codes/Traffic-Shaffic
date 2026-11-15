@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://bphc8tv0tvyb"]
+
+[ext_resource type="Texture2D" uid="uid://ci0j5r8i1qnuo" path="res://assets/npc.png" id="1_nh2m4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ry0np"]
+size = Vector2(29, 28)
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=446842908]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=756044830]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_ry0np")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=529697499]
+scale = Vector2(8, 8)
+texture = ExtResource("1_nh2m4")

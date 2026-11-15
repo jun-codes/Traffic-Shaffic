@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://dgariprk1n4yr"]
+
+[ext_resource type="Script" uid="uid://07ve0nipq4gs" path="res://scripts/death.gd" id="1_0hhgj"]
+[ext_resource type="FontFile" uid="uid://dnw3gmmsf4lfv" path="res://assets/PixelOperator8-Bold.ttf" id="2_w8wr1"]
+
+[node name="Node2D" type="Node2D" unique_id=1555073385]
+position = Vector2(576, 324)
+script = ExtResource("1_0hhgj")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=267352107]
+offset_left = -576.0
+offset_top = -324.0
+offset_right = 576.0
+offset_bottom = 324.0
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="." unique_id=38785114]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -287.5
+offset_top = -150.0
+offset_right = 287.5
+offset_bottom = -40.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_w8wr1")
+theme_override_font_sizes/font_size = 83
+text = "YOU CRASHED!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="btm" type="Button" parent="." unique_id=348435407]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -57.0
+offset_top = 50.0
+offset_right = 57.0
+offset_bottom = 81.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_w8wr1")
+theme_override_font_sizes/font_size = 12
+text = "back to menu"
+
+[node name="restart level" type="Button" parent="." unique_id=104956356]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -57.0
+offset_top = 100.0
+offset_right = 57.0
+offset_bottom = 131.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_w8wr1")
+theme_override_font_sizes/font_size = 12
+text = "restart level"
+
+[connection signal="pressed" from="btm" to="." method="_on_btm_pressed"]
+[connection signal="pressed" from="restart level" to="." method="_on_restart_level_pressed"]
