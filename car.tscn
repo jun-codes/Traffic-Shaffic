@@ -1,18 +1,46 @@
 [gd_scene format=3 uid="uid://cvlxstcmvxm3m"]
 
 [ext_resource type="Script" uid="uid://c2qkimn5rpsed" path="res://car.gd" id="1_uoj53"]
-[ext_resource type="Texture2D" uid="uid://c08pmtxnu2c6" path="res://icons/car-side-svgrepo-com.png" id="2_uoj53"]
+[ext_resource type="Texture2D" uid="uid://byemc865ryo1x" path="res://icons/carFrame1.png" id="3_v0hk8"]
+[ext_resource type="Texture2D" uid="uid://c8m0tk5bxbu2u" path="res://icons/car frame 2.png" id="4_mjudg"]
+[ext_resource type="Texture2D" uid="uid://la8p4232j1s1" path="res://icons/car frame 3.png" id="5_lpol0"]
+[ext_resource type="Texture2D" uid="uid://dob7icxwtporw" path="res://icons/car frame 4.png" id="6_u5era"]
+[ext_resource type="Texture2D" uid="uid://cn7cq8rovf5ow" path="res://icons/car frame 5.png" id="7_uhg3g"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_le82g"]
 size = Vector2(226, 149)
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_le82g"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_v0hk8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_mjudg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_lpol0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_u5era")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_uhg3g")
+}],
+"loop": 0,
+"name": &"turn",
+"speed": 5.0
+}]
+
 [node name="car" type="CharacterBody2D" unique_id=887401131]
 script = ExtResource("1_uoj53")
-
-[node name="CarSideSvgrepoCom" type="Sprite2D" parent="." unique_id=947123103]
-scale = Vector2(0.4, 0.401)
-texture = ExtResource("2_uoj53")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1292953604]
 position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_le82g")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=806904238]
+scale = Vector2(0.4, 0.401)
+sprite_frames = SubResource("SpriteFrames_le82g")
+animation = &"turn"
