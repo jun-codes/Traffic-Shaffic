@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c08pmtxnu2c6"
-path="res://.godot/imported/car-side-svgrepo-com.png-f09b301ef6f2c387d4b9f977855b7e9b.ctex"
+uid="uid://cn7cq8rovf5ow"
+path="res://.godot/imported/car frame 5.png-b7e6554cae1f45d6f795ba4658533e20.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://icons/car-side-svgrepo-com.png"
-dest_files=["res://.godot/imported/car-side-svgrepo-com.png-f09b301ef6f2c387d4b9f977855b7e9b.ctex"]
+source_file="res://icons/car frame 5.png"
+dest_files=["res://.godot/imported/car frame 5.png-b7e6554cae1f45d6f795ba4658533e20.ctex"]
 
 [params]
 
