@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://0kdoc1cfxmrm"]
+
+[ext_resource type="PackedScene" uid="uid://cvlxstcmvxm3m" path="res://car.tscn" id="1_4et2j"]
+
+[node name="mumbai" type="Node2D" unique_id=415463663]
+
+[node name="car" parent="." unique_id=887401131 instance=ExtResource("1_4et2j")]
+position = Vector2(115.000015, 136)
+rotation = -0.016183455
+scale = Vector2(1.0096483, 0.9906227)
+skew = 0.019008398
